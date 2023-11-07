@@ -21,4 +21,11 @@ services:
     environment:
       - NGINX_HOST=foobar.com
       - NGINX_PORT=80
+  duplicati:
+    image: duplicati
+    ports:
+      - "8200:8200"
+    volumes:
+      - "/duplicati:/backup/home duplicati/duplicati"
+  
   
