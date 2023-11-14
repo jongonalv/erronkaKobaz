@@ -6,12 +6,17 @@ services:
       - db
     ports:
       - "8069:8069"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
   db:
     image: postgres:15
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
   nginx:
     image: nginx
     volumes:
@@ -21,4 +26,48 @@ services:
     environment:
       - NGINX_HOST=foobar.com
       - NGINX_PORT=80
+  duplicati:
+    image: lscr.io/linuxserver/duplicati:latest
+    container_name: duplicati
+    environment:
+       - PUID=1000
+       - PGID=1000
+       - TZ=Etc/UTC
+       - CLI_ARGS= #optional
+    ports:
+      - 8200:8200
+    volumes:
+      - duplicati-backups:/backups
+      - duplicati-source:/source
+    restart: unless-stopped
+
+volumes:
+  odoo-web-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Erronka/container/odoo_data
+
+  odoo-db-data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Erronka/container/odoo_db
+
+  duplicati-backups:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Erronka/container/dduplicati
+
+  duplicati-source:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: C:/Erronka/container
+
   
