@@ -6,26 +6,46 @@
     <link rel="stylesheet" type="text/css" href="Erronka.css" title="style"></link>
 </head>
 <body>
-    <header>
-        <h1>Kontaktua</h1>
-    </header>
-
-    <nav>
-        <a href="Index.html">Hasiera</a>
-        <a href="ERP-CRM.html">ERP-CRM</a>
-        <a href="#">Kontaktua</a>
-    </nav>
-
-    <section>
-        <div class="kontaktua">
-            <h2>Enpresaren kontaktua</h2>
-            <p>Tel: XXX XXX XXX</p>
-            <p>Korreoa: kobaz@gmail.com</p>
+    <div class="container">
+        <div class="Titulua"><h1>KOBAZ</h1></div>
+        <div class="Menua">
+            <a href="index.html">Hasiera</a>
+            <a href="EBuruz.html">Enpresari buruz</a>
+            <a href="ERP-CRM.html">ERP-CRM</a>
+            <a href="Langileak.html">Taldekideak</a>
+            <a href="Kontaktua.html">Kontaktua</a>
         </div>
-    </section>
-
-    <footer>
-        &copy; 2023 
-    </footer>
+        <div class="Kontaktua">
+            <h1>Jar zaitez gurekin kontaktuan</h1>
+        </div>
+        <div class="Kontaktua-Form">
+            <form action="Erronka.php" method="post">
+                <label for="Izena">Izena</label>
+                <input type="text" name="Izena" id="Izena" placeholder="Sartu zure Izena">
+              
+                <label for="email">Helbide elektronikoa</label>
+                <input type="email" name="email" id="email" placeholder="Saru zure helbide elektronikoa">
+              
+                <label for="telefonoa">telefonoa</label>
+                <input type="tel" name="telefonoa" id="telefonoa" placeholder="Sartu zure telefono zenbakia">
+              
+                <label for="helbidea">helbidea</label>
+                <input type="text" name="helbidea" id="helbidea" placeholder="Sartu zure helbidea">
+              
+                <label for="gaia">Gaia</label>
+                <input type="text" name="gaia" id="gaia" placeholder="Sartu mezuaren gaia">
+              
+                <label for="mezua">Mezua</label>
+                <textarea name="mezua" id="mezua" cols="30" rows="10" placeholder="Idatzi zure mezua"></textarea>
+              
+                <input type="submit" value="Enviar">
+              </form>
+              
+        </div>
+        <div class="Orri-oina">
+            Kobaz<br/><br/><br/>
+            Julen Merino eta Jon Gonzalez<br/><br/><br/>
+            &copy; 2023 kobaz enpresa, Julen eta Jon-engatik egina</div>
+    </div>
 </body>
 </html>

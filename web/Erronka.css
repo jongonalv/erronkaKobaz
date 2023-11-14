@@ -1,46 +1,119 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    
+  }
 
-header {
-  background-color: #007acc;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 150px;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    align-items: stretch;
+  }
+  
+  .Titulua { grid-area: 1 / 1 / 2 / 3; 
+    background-color: #007acc;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Menua { grid-area: 1 / 1 / 1 / 3;
+    display: flex;
+    background-color: #007acc;
+    color: #fff;
+    align-items: center;
+    justify-self: end;
+  }
+  a{
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .Hasiera-irudia img { grid-area: 2 / 1 / 4 / 3; 
+  }
+  
+  .Irudia-L1 { grid-area: 2 / 1 / 4 / 2; }
+  
+  .Irudia-L2 { grid-area: 2 / 2 / 4 / 3; }
+  
+  .Kontaktua { grid-area: 2 / 1 / 2 / 2; 
+    text-align: center;
 
-nav {
-  text-align: left;
-  background-color: #007acc;
-  color: #fff;
-  padding: 10px;
-}
+  }
+  
+  .Kontaktua-Form { grid-area: 2 / 2 / 4 / 3; }
+  
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-}
+  .Ezaugarri-irudia { grid-area: 2 / 1 / 3 / 2;
+    text-align: center;
+  }
+  
+  .Ezaugarriak { grid-area: 2 / 2 / 3 / 3; 
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .Abantailak { grid-area: 3 / 1 / 4 / 2; 
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .Abantail-irudia { grid-area: 3 / 2 / 4 / 3; 
+    text-align: center;
+  }
+  
+  .Orri-oina { grid-area: 4 / 1 / 5 / 3; 
+    background-color: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
 
-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.kontaktua{
-  text-align: center;
-}
-
-footer {
-  background-color: #007acc;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
