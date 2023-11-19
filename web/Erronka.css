@@ -112,10 +112,10 @@ body {
 }
 
 .Titulua {
-  grid-area: 1 / 1 / 2 / 3;
+  grid-area: 1 / 1 / 1 / 3;
   background-color: #007acc;
   color: #fff;
-  text-align: left;
+  text-align: right;
   padding: 1%;
   display: flex;
   align-items: center;
@@ -130,6 +130,48 @@ body {
   z-index: 1;
 }
 
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.Menua {
+  grid-area: 1 / 1 / 1 / 3;
+  padding: 1.5%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.nav li a {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav li a:hover {
+  background-color: #434343;
+}
+
+.nav > li {
+  float: right;
+}
+
+.nav li ul {
+  display: none ;
+  position: relative;
+  min-width: 140px;
+  margin-right: 20%;
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+/*
 .Menua {
   grid-area: 1 / 1 / 1 / 3;
   display: flex;
@@ -154,7 +196,7 @@ a{
   border-radius: 10px;
   text-decoration:none;
 }
-
+*/
 
 /*----------Enpresari buruz----------*/
 .EBuruz {
@@ -321,11 +363,43 @@ input[type="submit"]:hover {
   }
 
   .Menua-titulua {
-    display: none;
+    padding: 25%;
   }
 
   .Menua {
-    display: none;
+    grid-area: 1 / 1 / 1 / 1;
+    padding: 1.5%;
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  
+  .nav li a {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
+  
+  .nav li a:hover {
+    background-color: #434343;
+  }
+  
+  .nav > li {
+    float: right;
+  }
+  
+  .nav li ul {
+    display: none ;
+    position: relative;
+    min-width: 140px;
+    margin-right: 20%;
+  }
+  
+  .nav li:hover > ul {
+    display: block;
   }
 
   .EBuruz {
